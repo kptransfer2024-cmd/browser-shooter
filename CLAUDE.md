@@ -15,7 +15,15 @@ Open any `.html` file directly in a browser. No server, no build step required.
 - **Remote:** `https://github.com/kptransfer2024-cmd/browser-shooter`
 - **Branch:** `main`
 - **Auth:** Token is embedded in the git remote URL — `git push` works without prompting.
-- **Commit policy:** Commit and push after every meaningful change. Use clean, descriptive commit messages.
+
+### Commit discipline (required)
+
+After every meaningful unit of work — a new feature, a bug fix, a refactor, a new file — commit and push immediately. Do not batch multiple unrelated changes into one commit. The goal is that no work is ever lost and any state can be recovered from GitHub.
+
+- Use clear, specific commit messages that describe what changed and why (not just "update file")
+- `git add <specific files>` — never `git add .` blindly
+- Always `git push` after committing — a local-only commit is not safe
+- If a session ends mid-feature, commit the incomplete work with a `wip:` prefix so progress is preserved
 
 ## Architecture
 
